@@ -1,0 +1,37 @@
+pmacct 安装
+安装 libpcap-dev $ sudo apt-get install libpcap-dev 
+安装 librdkafka
+$ git clone https://github.com/edenhill/librdkafka.git
+$ cd librdkafka
+$ ./configure
+$ make
+$ make install
+安装 libjansson-dev $ apt-get install libpcap-dev libjansson-dev
+安装带有选项的 pmacct 以使用 kafka
+安装依赖
+$ apt-get install pkg-config libtool autoconf automake bash
+Build GitHub code:
+$ git clone https://github.com/pmacct/pmacct.git
+$ cd pmacct
+$ ./autogen.sh
+$ ./configure --enable-kafka --enable-jansson --enable-ipv6
+$ make
+$ make install [with super-user permission]
+确认 $ pmacctd -V， output：
+Promiscuous Mode Accounting Daemon, pmacctd 1.7.4-git (20191031-00)
+
+Arguments:
+ '--enable-kafka' '--enable-jansson' '--enable-ipv6' '--enable-l2' '--enable-64bit' '--enable-traffic-bins' '--enable-bgp-bins' '--enable-bmp-bins' '--enable-st-bins'
+
+Libs:
+libpcap version 1.8.1
+rdkafka 1.2.2-RC1-1-g8d44dd-dirty
+jansson 2.11
+
+System:
+Linux 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64
+
+Compiler:
+gcc 7.4.0
+
+For suggestions, critics, bugs, contact me: Paolo Lucente <paolo@pmacct.net>.
