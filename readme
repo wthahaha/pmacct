@@ -40,3 +40,6 @@ https://github.com/RocketWill/Netflow-Analysis-with-Spark-Streaming
 
 执行:
 pmacctd -f pmacc.conf
+
+
+https://opennms.discourse.group/t/how-to-use-pmacct-as-a-netflow-9-probe-on-ubuntu-linux-and-mac-os-big-sur/1160/3
